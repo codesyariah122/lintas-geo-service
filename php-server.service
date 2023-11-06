@@ -1,0 +1,9 @@
+[Service]
+ExecStart=/usr/bin/php -S 0.0.0.0:4041 /var/www/html/lintas-geo.xz/index.php
+WorkingDirectory=/var/www/html/lintas-geo.xz
+Restart=always
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
