@@ -1,0 +1,20 @@
+server {
+    listen 80;
+    server_name 192.168.1.10:4041;
+
+    root /var/www/html/lintas-geo.xz;
+    index index.html index.htm index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}
