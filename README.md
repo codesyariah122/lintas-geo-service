@@ -1,6 +1,9 @@
 # lintas-geo-service
 ### Run the command build  
 ```bash
+# cd /etc/systemd/system
+# touch php-server.service
+
 # ufw allow 4041/tcp
 # ufw status
 # systemctl daemon-reload
